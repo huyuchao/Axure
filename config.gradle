@@ -1,0 +1,37 @@
+ext {
+    //Android项目基础配置信息
+    minSdkVersion = 14
+    compileSdkVersion = 26
+    targetSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    javaVersion = JavaVersion.VERSION_1_7
+
+    version = [
+            // 统一使用
+            versionName: "1.0.0",
+            versionCode: 1,
+    ]
+
+    //Android支持库版本信息
+    dependVersion = [
+            support: "23.4.0",
+            //design库,会自动下载appcompat-v7,recycleview，support-*，transition，desgin等库
+            design : "25.0.0",
+    ]
+    //第三方依赖库版本信息
+    dependencies = [
+            // ------------- Android -------------
+            supportV4         : "com.android.support:support-v4:${dependVersion.support}",
+            design            : "com.android.support:design:${dependVersion.design}",
+            //viewanimator动画的封装
+            viewanimator      : 'com.github.florent37:viewanimator:1.0.5',
+
+            // ------------- LeakCanary -------------
+
+            android_networking: 'com.amitshekhar.android:android-networking:1.0.0',
+
+            rxjava            : 'io.reactivex.rxjava2:rxjava:2.1.5',
+            rxandroid         : "io.reactivex.rxjava2:rxandroid:2.0.1"
+
+    ]
+}
